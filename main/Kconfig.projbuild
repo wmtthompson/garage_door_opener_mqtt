@@ -1,0 +1,37 @@
+menu "App Configuration"
+
+    config BROKER_URL
+        string "Broker URL"
+        default "mqtt://mqtt.eclipseprojects.io"
+        help
+            URL of the broker to connect to
+    
+    config HOST
+    	string "Network Host"
+    	default "ASUS-Z97-A.hsd1.nh.comcast.net"
+    	help
+    		Host Name of the broker
+    
+    config RELAY_GPIO
+    	int "GPIO Pin for Activating the Relay."
+    	default 2
+    	help
+    		Select the GPIO pin that will be used for the relay, default is 2 which just turns on the led.
+    
+    config MOTION_GPIO
+    	int "GPIO Pin for Motion Sensor"
+    	default 21
+    	help
+    		Select the GPIO to use to trigger motion sensor interrupt. (D21 on the Dev1 Kit)
+    
+    config MOTION_LED_GPIO
+    	int "GPIO Output for LED indicating motion detected."
+    	default 2
+    	help
+    		On Devkit1 GPIO 2 is the builtin LED, blinks blue.
+
+    config BROKER_URL_FROM_STDIN
+        bool
+        default y if BROKER_URL = "FROM_STDIN"
+
+endmenu
