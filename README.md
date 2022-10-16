@@ -1,5 +1,6 @@
-# ESP-MQTT sample application
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+# ESP-MQTT Garage Door Opener Application
+
+This application is based on several examples from the esp-idf examples. This application is written to connect to a relay that closes a switch for an automatic garage door opener. It also includes an interrupt to a IR motion sensor. This allows the garage door to opened or closed via an MQTT app on a smartphone. It also allows motion in the garage to be monitored in a way that has a faster response time when compared to many camera based solutions.
 
 This example connects to the broker URI selected using `idf.py menuconfig` (using mqtt tcp transport) and as a demonstration subscribes/unsubscribes and send a message on certain topic.
 (Please note that the public broker is maintained by the community so may not be always available, for details please see this [disclaimer](https://iot.eclipse.org/getting-started/#sandboxes))
@@ -8,11 +9,11 @@ Note: If the URI equals `FROM_STDIN` then the broker address is read from stdin 
 
 It uses ESP-MQTT library which implements mqtt client to connect to mqtt broker.
 
-## How to use example
+This 
 
 ### Hardware Required
 
-This example can be executed on any ESP32 board, the only required interface is WiFi and connection to internet.
+This program is meant to be run on a custom board that is connect to a relay and an infrared motion sensor. Any board that has a logical connection to a relay, and a logical connection to an infrared motion sensor.
 
 ### Configure the project
 
