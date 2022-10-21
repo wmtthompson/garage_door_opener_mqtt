@@ -3,7 +3,6 @@
 This application is based on several examples from the esp-idf examples. This application is written to connect to a relay that closes a switch for an automatic garage door opener. It also includes an interrupt to a IR motion sensor. This allows the garage door to opened or closed via an MQTT app on a smartphone. It also allows motion in the garage to be monitored in a way that has a faster response time when compared to many camera based solutions.
 
 This example connects to the broker URI selected using `idf.py menuconfig` (using mqtt tcp transport) and as a demonstration subscribes/unsubscribes and send a message on certain topic.
-(Please note that the public broker is maintained by the community so may not be always available, for details please see this [disclaimer](https://iot.eclipse.org/getting-started/#sandboxes))
 
 Note: If the URI equals `FROM_STDIN` then the broker address is read from stdin upon application startup (used for testing)
 
